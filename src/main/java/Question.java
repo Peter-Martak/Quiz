@@ -3,10 +3,17 @@ public class Question {
 
     private String[] listOfOption;
 
+    private Answer corretAnswer;
 
-    public Question(String question, String[] listOfOption) {
+
+    public Question(String question, String[] listOfOption, Answer correctAnswer) {
         this.question = question;
         this.listOfOption = listOfOption;
+        this.corretAnswer = correctAnswer;
+    }
+
+    public Answer getCorretAnswer() {
+        return corretAnswer;
     }
 
     public String getQuestion(){

@@ -16,4 +16,12 @@ public class Answer {
     public String toString() {
         return answer;
     }
+
+    public boolean isCorrect(String userAnswer){
+        boolean isCorrect = false;
+        if (this.answer.equals(userAnswer)){
+            isCorrect = true;
+        }
+        return isCorrect;
+    }
 }
