@@ -1,14 +1,14 @@
 public class Question {
     private String question;
 
-    private String[] listOfOption;
+    private Answer[] options;
 
     private Answer corretAnswer;
 
 
-    public Question(String question, String[] listOfOption, Answer correctAnswer) {
+    public Question(String question, Answer[] options, Answer correctAnswer) {
         this.question = question;
-        this.listOfOption = listOfOption;
+        this.options = options;
         this.corretAnswer = correctAnswer;
     }
 
@@ -20,16 +20,16 @@ public class Question {
         return this.question;
     }
 
-    public String[] getListOfOption() {
-        return listOfOption;
+    public Answer[] getOptions() {
+        return options;
     }
 
     public void displayQuestion() {
         System.out.println(this.question);
-        for(String option : this.listOfOption){
+        for(Answer option : this.options){
             System.out.println(option);
         }
-        int optionSize = this.listOfOption.length-1;
+        int optionSize = this.options.length-1;
         char endChar = (char)((char)97 + (char)optionSize);
         String end = Character.toString(endChar);
         System.out.println("Enter the correct Answer (a -" + end + ")");
